@@ -1,36 +1,158 @@
-<link rel="stylesheet" href="/css/home.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+    <link rel="shortcut icon" type="image/png" href="/images/ECL-Logo-1.png">
+    <title>ECL | AMS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  
+    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+
+<!-- <link rel="stylesheet" href="/css/home.css"> -->
+<body>
+    
 
 <div id="home-container">
-    <section id="feed-posts">
-            <h4>Posts</h4>
-            <% if(locals.user){ %>
-            <form action="/posts/create" id="new-post-form" method="POST">
-                <textarea name="content" cols="30" rows="3" placeholder="Type Here..." required></textarea>
-                <input type="submit" value="Post">
-            </form>
-            <% } %>
+    <div>
         
-            <div id="posts-list-container">
-                <ul>
-                    <% for(post of posts){ %>
-                        
-                    <%- include('_post') -%>
-                        
-                    <%} %>
-                </ul>
+        <div class="auth-links" >
+            <ul>
+                <% if (locals.user){ %>
+                  
+                  <div  style="text-align: center; align-items: center; margin-left: 600px;">
+                    <div style="margin-top: 10px;">
+                      <button type="button" class="btn btn-outline-info">
+                        <a href="/users/employee_master">Asset User</a>
+                      </button>
+                    </div>
+                    <div style="margin-top: 10px;">
+                      <button type="button" class="btn btn-outline-info">
+                        <a href="/users/add">Asset Record</a>
+                      </button>
+                  </div>
+                    <div style="margin-top: 10px;">
+                      <button type="button" class="btn btn-outline-info">
+                        <a href="/users/Asset_Info">Asset Info</a>
+                      </button>
+                  </div>
+                    <!-- <div style="margin-top: 10px;">
+                      <button type="button" class="btn btn-outline-info">
+                        <a href="/users/index">Asset database</a>
+                      </button>
+                  </div> -->
+                  
+                  </div>
+                  
+                  
+                  
+                  
+                
+                 <% }else{ %> 
+                    
+                <!-- <li>
+                    <a href="/users/sign-in">Sign In</a>
+                </li>
+                <li>
+                    <a href="/users/sign-up">Sign Up</a>
+                </li> -->
+                 <!-- start of content -->
+
+  <section class="text-gray-600 body-font" style="display: block;">
+    <div class="container mx-auto flex px-5 py-20 md:flex-row flex-col items-center">
+      <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-700">Eastern Coalfields
+          <br class="hidden lg:inline-block">
+        </h1>
+        <p class="mb-8 leading-relaxed" style="text-align: justify;">Eastern Coalfields Limited (ECL) is a coal producer based in India. The company was founded in 1975 after nationalisation of coal mines in India. It operates coal mines in Jharkhand
+          and West Bengal states of India. It inherited all the private sector coal mines of the Raniganj Coalfield. It is one of the fully owned subsidiaries of Coal India Limited. The company has its headquarters at Sanctoria, in West Bengal.</p>
+        <div class="flex justify-center">
+
+        </div>
+      </div>
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <img class="object-cover object-center rounded" alt="hero" src="/images/ecl-2.png">
+      </div>
+    </div>
+  </section>
+
+
+  <section class="text-grey-300 body-font" style="background-color: hsl(198, 67%, 68%);">
+    <div class="container px-5 pt-12 pb-12 mb-20 mx-auto">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="mt-20 active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1" class="mt-20"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2" class="mt-20"></li>
+        </ol>
+        <div class="carousel-inner" style="height: 360px;">
+          <div class="carousel-item active">
+            <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-500 mb-8" viewBox="0 0 975.036 975.036">
+                <path
+                  d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+                </path>
+              </svg>
+              <h3 class="pb-4 text-3xl">Asset Management System</h3>
+              <p class="leading-relaxed text-lg">Asset management software is a dedicated system that allows you monitor, track and categorize your company’s physical
+                assets in real time. Asset management system software keeps the track of 
+                Hardware as well as Software are currently in use. Also which system admin is using.</p>
             </div>
-        </section>
+          </div>
+
+          <div class="carousel-item">
+            <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-500 mb-8" viewBox="0 0 975.036 975.036">
+                <path
+                  d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+                </path>
+              </svg>
+              <h3 class="pb-4 text-3xl">MISSION OF COAL INDIA</h3>
+              <p class="leading-relaxed text-lg">To produce and market the planned quantity of coal and coal products efficiently and economically in an eco-friendly manner with due regard to safety, quality and conservation.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-500 mb-8" viewBox="0 0 975.036 975.036">
+                <path
+                  d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+                </path>
+              </svg>
+              <h3 class="pb-4 text-3xl">VISION OF COAL INDIA</h3>
+              <p class="leading-relaxed text-lg">To emerge as a global player in the primary energy sector committed to provide energy curity to the country by attaining environmentally & socially sustainable growth through best practices from mine
+                to market.</p>
+            </div>
+          </div>
+
+        </div>
+        <a class="carousel-control-prev pr-20" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <i class="fas fa-less-than fa-lg text-gray-700 hover:text-gray-800" aria-hidden="true"></i>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next pl-20" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <i class="fas fa-greater-than fa-lg text-gray-700 hover:text-gray-800" aria-hidden="true"></i>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end of content -->
         
+                <% } %>
+            </ul>
+        </div>
+    </div>
         
-        <section id="user-friends">
-            <h4>Friends</h4>
-            <% for(u of all_users){%>
-                <p>
-                    <a href="/users/profile/<%= u.id %>"><%= u.name %></a>
-                </p>
-            <% } %>
-        </section>
 </div>
+</body>
 
 <!-- importing this script for creating the comments -->
 <script src="/js/home_post_comments.js" ></script>

@@ -1,0 +1,107 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+    <link rel="shortcut icon" type="image/png" href="/images/ECL-Logo-1.png">
+    <title>EMS | Sign Up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+
+  
+
+  <section class="text-blue-500 body-font">
+    <div class="container px-5 py-5 mx-auto flex flex-wrap items-center">
+      <div class="lg:w-5/6 md:w-2/2 rounded-lg p-8 flex-col md:ml-auto mr-auto w-full mt-10 md:mt-0" >
+
+            <form action="/master-asset_software" method="post">
+              <div class="lg:w-5/6 md:w-2/2 rounded-lg p-8 flex-col md:ml-auto mr-auto w-full mt-10 md:mt-0" >
+
+                <h1 class="text-center signup-header">Software Description</h1>
+                      
+                <!-- <div class="relative mb-4">
+                  <div class="row">
+                    <div class="col-lg-4 mb-4">
+                      <label for="first_name" class="leading-7 text-lg text-blue-500">First Name</label>
+                      <input class="w-full bg-white rounded border border-blue-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-blue-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required type="text" name="first_name" id="first_name" 
+              placeholder="First name"  required />
+                    </div>
+               
+                    <div class="col-lg-4">
+                      <label for="last_name" class="leading-7 text-lg text-blue-500">Last Name</label>
+                      <input type="text" placeholder="Last Name" id="last_name" name="last_name" class="w-full bg-white rounded border border-blue-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-blue-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required >
+                    </div>
+                  </div>
+                </div> -->
+                <div class="relative mb-4">
+                  <label for="type" class="leading-7 text-lg text-blue-500">Software Type</label>
+                  <select name="type" class="w-full bg-white rounded border border-blue-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required type="type" name="type" id="type"  
+                  placeholder="Designation">
+                    <option value="default" disabled selected hidden>Type</option>
+                    <option value="MS Office">MS Office</option>
+                    <option value="MS Project">MS Project</option>
+                    
+                  </select>
+                </div>  
+                             
+              
+                <!-- <div class="relative mb-4">
+                  <label for="email" class="leading-7 text-lg text-blue-500">Email</label>
+                  <input class="w-full bg-white rounded border border-blue-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-blue-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required type="email" name="email" id="email" 
+                  placeholder="E-Mail " required />
+                </div>         -->
+                <div class="relative mb-4">
+                  <label for="license" class="leading-7 text-lg text-blue-500">License Number</label>
+                  <input class="w-full bg-white rounded border border-blue-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-blue-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required type="text" name="license" id="license" placeholder="License Number" required/>
+                </div>    
+                <div class="relative mb-4">
+                  <label for="serial" class="leading-7 text-lg text-blue-500">Product Serial Number</label>
+                  <input class="w-full bg-white rounded border border-blue-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-blue-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required type="serial" name="serial" id="serial" placeholder="Serial Number" required/>
+                </div>         
+                <div class="relative mb-4">
+                  <label for="lot" class="leading-7 text-lg text-blue-500">Lot Number</label>
+                  <input class="w-full bg-white rounded border border-blue-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-blue-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required type="lot" name="lot" id="lot" placeholder="Lot Number" required/>
+                </div>         
+
+                <div class="relative mb-4">
+                  <label for="serial_hq" class="leading-7 text-lg text-blue-500">Headquater Serial Number</label>
+                  <input class="w-full bg-white rounded border border-blue-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-blue-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required type="number" name="serial_hq" id="serial_hq" placeholder="HQ serial number" required/>
+                </div>  
+
+                <!-- <div class="relative mb-4">
+                  <label for="email" class="leading-7 text-lg text-blue-500">Phone number</label>
+                  <input class="w-full bg-white rounded border border-blue-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-blue-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required type="text" name="phone" id="phone" placeholder="Phone Number " required/>
+                </div>  -->
+
+                
+
+                <!-- <div class="relative mb-4">
+                  <label for="department" class="leading-7 text-lg text-blue-500">Department</label>
+                  <select name="department" class="w-full bg-white rounded border border-blue-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required type="department" name="department" id="department"  
+                  placeholder="Department" >
+                    <option value="default" disabled selected hidden>Department</option>
+                    <option value="Mining">Mining Department</option>
+                    <option value="System">System Department</option>
+                    <option value="Finance">Finance Department</option>
+                    <option value="HR">HR Department</option>
+                    <option value="Vigilance">Vigilance Department</option>
+                  </select>
+                </div>               -->
+                                  
+                <div class="text-center relative mt-2 mb-6">
+                  <input type="submit" id="submitDetails"  
+              name="submitDetails" value="Submit" />
+                </div>
+              
+                        </div>
+              </form>
+    </div> 
+  </section>
+  
+  

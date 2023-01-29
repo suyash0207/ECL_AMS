@@ -1,12 +1,29 @@
-<footer id="layout-footer">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+    <link rel="shortcut icon" type="image/png" href="images\ECL-Logo-1.png">
+    <title>ECL | AMS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  
+    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+
+<!-- <footer id="layout-footer">
     <div>
         <p>
-            &#169; Coding Ninjas. All Rights Reserved
+            &#169; EASTERN COALFIELDS LIMITED, <br>Sanctoria, Post: Dishergarh, <br>Dist.: Burdwan, West Bengal,<br> PIN - 713 333. <br> All Rights Reserved
         </p>
     </div>
 
     <div>
-        <nav class="footer-nav">
+         <nav class="footer-nav">
             <ul>
                 <li>
                     <a href="/">Home</a>
@@ -15,6 +32,96 @@
                     <a href="/users/profile">Profile</a>
                 </li>
             </ul>
-        </nav>
+        </nav> 
+    </div> 
+</footer>-->
+ <!-- Start of Carousel -->
+
+ 
+
+  <!-- End of Carousel -->
+
+<footer class="text-gray-600 body-font" style="margin-top: 160px">
+
+    <div class="container px-2 py-10 pt-2 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col text-center">
+
+      <!-- <div class="col-lg-4 col-md-4 w-full px-4 pb-8">
+        <h3 class="title-font font-medium text-gray-700 tracking-widest text-sm mb-3 text-center">DISCLAIMER</h3>
+        <p class="f_para text-gray-600">Information on this site is believed to be accurate but ECL disclaims any liability for any errors or omissions that may occur from time to time.</p>
+      </div> -->
+      <div class="col-lg-4 col-md-4 w-full px-4 pb-8" style="margin-left: 30px;">
+        <h3 class="title-font font-medium text-gray-700 tracking-widest text-sm mb-3 text-center">ADDRESS</h3>
+        <p class="f_para text-gray-600">EASTERN COALFIELDS LIMITED, <br>Sanctoria, Post: Dishergarh, <br>Dist.: Burdwan, West Bengal,<br> PIN - 713 333</p>
+      </div>
+      <div class="col-lg-4 col-md-4 w-full px-4 pb-8" style="margin-left: 295px;">
+        <h3 class="title-font font-medium text-gray-700 tracking-widest text-sm mb-3 text-center">PHONE / FAX / GRAM</h3>
+        <p class="f_para text-gray-600"><i class="fa fa-phone-square"></i> &nbsp;Phone : (0341) 2520052-53, 2520414<br>
+          <i class="fa fa-fax"></i> &nbsp;Fax : (0341) 2523574<br>
+          <i class="fa fa-comments"></i> &nbsp;Gram : EASTCOAL
+        </p>
+      </div>
     </div>
+
+    </div>
+
+
+    <!-- end of footer -->
+
+    <script type="text/javascript">
+      function updateClock() {
+        var now = new Date();
+        var dname = now.getDay(),
+          mo = now.getMonth(),
+          dnum = now.getDate(),
+          yr = now.getFullYear(),
+          hou = now.getHours(),
+          min = now.getMinutes(),
+          sec = now.getSeconds(),
+          pe = "AM";
+
+        if (hou >= 12) {
+          pe = "PM";
+        }
+        if (hou == 0) {
+          hou = 12;
+        }
+        if (hou > 12) {
+          hou = hou - 12;
+        }
+
+        Number.prototype.pad = function(digits) {
+          for (var n = this.toString(); n.length < digits; n = 0 + n);
+          return n;
+        }
+
+        var months = ["January", "February", "March", "April", "May", "June", "July", "Augest", "September", "October", "November", "December"];
+        var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
+        var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+        for (var i = 0; i < ids.length; i++)
+          document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+      }
+
+      function initClock() {
+        updateClock();
+        window.setInterval("updateClock()", 1);
+      }
+    </script>
+
+</body>
+
+<!-- start of extreme footer -->
+
+<footer>
+  <div class="bg-gray-100" style="background-color: #42669c;">
+    <div class="container mx-auto pt-4 py-2 px-5 flex flex-wrap flex-col sm:flex-row">
+      <span class="footer-ecl ml-4 text-xl text-gray-400"></span>
+      </a>
+      <p class="footer-para text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0">©️ 2022 Copyright Eastern Coalfields Limited
+        
+      </p>
+    </div>
+  </div>
+</footer>
+
 </footer>
